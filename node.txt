@@ -1,0 +1,19 @@
+- useState คือ Hook ที่ใช้สร้างตัวแปร (state) และทำให้ React รู้ว่าเมื่อค่าเปลี่ยนต้อง render ใหม่
+
+- useEffect คือ Hook ตัวนึงที่ใช้จัดการ side effect ต่างๆ
+  - อ่าน / เขียน ข้อมูล localStorage
+  - ทำงานตอน mounting / unmounting หรือ state ตอนค่าใน[]เปลี่ยน (state)
+    ex. useEffect(() => {
+            console.log("Component render แล้ว");
+        }, []); 
+        - ทำงานครั้งเดียวตอน render แรก
+    ex. useEffect(() => {
+            console.log("count เปลี่ยนค่า:", count);
+        }, [useCount]); 
+        - ทำงานทุกครั้งตอน useCount เปลี่ยน
+
+- LOCAL_STORAGE_KEY = 'name-อะไรก็ได้' เป็นชื่อที่เอาไว้เก็บค่าบน browser
+
+- JSON.stringify() เพราะ localStorage, sessionStorage, หรือส่งข้อมูลผ่าน network (เช่น fetch API) 
+  ต้องใช้ข้อมูลในรูปแบบ string เท่านั้น
+  → จึงต้องใช้ JSON.stringify() เพื่อแปลงเป็น string ก่อนเก็บหรือส่ง
