@@ -53,3 +53,5 @@ export default tseslint.config({
 })
 ```
 # todo_lists_react_tailwind
+![image](https://github.com/user-attachments/assets/bf013757-5b90-4f9a-a2d6-d4749ab311f3)
+
