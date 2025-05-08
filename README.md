@@ -53,3 +53,6 @@ export default tseslint.config({
 })
 ```
 # todo_lists_react_tailwind
+ออกแบบระบบ to do list เพิ่ม ลบ แก้ไขค่า เก็บใน local storage
+![image](https://github.com/user-attachments/assets/bf013757-5b90-4f9a-a2d6-d4749ab311f3)
+
