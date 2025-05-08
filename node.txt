@@ -17,3 +17,11 @@
 - JSON.stringify() เพราะ localStorage, sessionStorage, หรือส่งข้อมูลผ่าน network (เช่น fetch API) 
   ต้องใช้ข้อมูลในรูปแบบ string เท่านั้น
   → จึงต้องใช้ JSON.stringify() เพื่อแปลงเป็น string ก่อนเก็บหรือส่ง
+
+
+- React rounter DOM - การทำงานแบบ single page
+  - URLParam - Key ที่ต้องใช้ จำเป็นเช่น Plant No Type -> เป็น object
+  - QueryString - ใช้ส่ง ข้อมูลเพิ่มเติม เช่น ตัวกรอง, keyword -> เป็น Array
+  - Link - สร้างลิงก์ให้ผู้ใช้กด
+  - useNavigate - เปลี่ยนหน้า โดยอัตโนมัติ เช่น หลัง login
+  
