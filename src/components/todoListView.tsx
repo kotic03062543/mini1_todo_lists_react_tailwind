@@ -1,8 +1,12 @@
 import todoListViewModel from "./todoListViewModel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { Context } from "../App";
 
 function todoList() {
+  const resultContext = useContext(Context);
+  console.log("resultContext", resultContext);
   const {
     addTodo,
     removeTodo,
@@ -14,8 +18,7 @@ function todoList() {
   } = todoListViewModel();
   return (
     <div>
-      <h1 className="text-2xl">เพิ่มรายการ</h1>
-
+      <h1 className="text-2xl">เพิ่มรายการ {resultContext.useName}</h1>
       <div className="grid grid-cols-2 gap-2 w-80 m-auto my-5">
         <input
           className="bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
@@ -65,7 +68,8 @@ function todoList() {
           </li>
         ))}
       </ul>
-      <button className="bg-transparent hover:bg-amber-300 transition duration-200 text-amber-500 hover:text-amber-700 border border-slate-700 rounded-md focus:border-slate-400 px-3 py-2 m-3"
+      <button
+        className="bg-transparent hover:bg-amber-300 transition duration-200 text-amber-500 hover:text-amber-700 border border-slate-700 rounded-md focus:border-slate-400 px-3 py-2 m-3"
         onClick={() => {
           localStorage.removeItem(LOCAL_STORAGE_KEY);
           setTodoList([]); // ล้าง state ด้วย

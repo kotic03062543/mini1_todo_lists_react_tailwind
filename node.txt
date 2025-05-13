@@ -1,3 +1,6 @@
+- Key
+ - rfce = function name พร้อม import
+
 - useState คือ Hook ที่ใช้สร้างตัวแปร (state) และทำให้ React รู้ว่าเมื่อค่าเปลี่ยนต้อง render ใหม่
 
 - useEffect คือ Hook ตัวนึงที่ใช้จัดการ side effect ต่างๆ
@@ -20,8 +23,15 @@
 
 
 - React rounter DOM - การทำงานแบบ single page
-  - URLParam - Key ที่ต้องใช้ จำเป็นเช่น Plant No Type -> เป็น object
-  - QueryString - ใช้ส่ง ข้อมูลเพิ่มเติม เช่น ตัวกรอง, keyword -> เป็น Array
+  - URLParam - Key ที่ต้องใช้ จำเป็นเช่น Plant No Type -> เป็น object useParams
+  - QueryString - ใช้ส่ง ข้อมูลเพิ่มเติม เช่น ตัวกรอง, keyword -> เป็น Array useSearchParams
   - Link - สร้างลิงก์ให้ผู้ใช้กด
   - useNavigate - เปลี่ยนหน้า โดยอัตโนมัติ เช่น หลัง login
+  import { useParams, useSearchParams } from "react-router-dom";
   
+
+- responsive flex <div className="gap-2 sm:gap-4 md:gap-6 lg:gap-10">
+ - default น้อยกว่า sm[640px] จะใช้ gap-2 
+ - >= sm[640px] จะใช้ gap-4
+ - >= md[768px] จะใช้ gap-6
+ - >= lg[1024px] จะใช้ gap-10

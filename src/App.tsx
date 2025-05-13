@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import "./App.css";
+import Test from "./components/test";
 import TodoList from "./components/todoListView";
+
+export const Context = createContext(null);
 
 function App() {
   const [isOpen, setOpen] = useState<boolean>(false);
-
+  const [useName, setName] = useState<string>("KK");
   return (
     <div>
       {/* <button
@@ -14,7 +17,10 @@ function App() {
         {(isOpen && "close") || "open"}
       </button>
       {isOpen && <TodoList />} */}
-      <TodoList />
+      <Context.Provider value={{ useName, setName }}>
+        <TodoList />
+        <Test />
+      </Context.Provider>
     </div>
   );
 }
